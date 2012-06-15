@@ -1,0 +1,3 @@
+[submodule "public/plugin/lokka-layouted-static"]
+	path = public/plugin/lokka-layouted-static
+	url = git@github.com:sowawa/lokka-layouted-static.git
