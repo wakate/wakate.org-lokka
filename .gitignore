@@ -18,3 +18,4 @@ config.yml
 /.yardoc
 .sass-cache
 database.yml
+*.swp
