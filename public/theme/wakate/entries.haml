@@ -1,0 +1,25 @@
+- @posts.each do |post|
+  .post
+    %h2.post-title
+      = link_to post.title, post.link  
+    .post-body
+      -# with whitespace preserved for code or pre.
+      = preserve do
+        = post.body
+    .post-foot
+      %div
+        %i.icon-time
+        = l(post.created_at, :format => :long)
+      - if logged_in?
+        %p
+          %i.icon-pencil
+          = link_to t('edit'), post.edit_link
+.pagination
+  %ul
+    - if @posts.pager.previous_page
+      %li
+        = link_to t('newer'), "?page=#{@posts.pager.previous_page}"
+    - if @posts.pager.next_page
+      %li
+        =  link_to t('older'), "?page=#{@posts.pager.next_page}"
+

@@ -1,0 +1,24 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", "lang" => "en", "dir" => "ltr", "xmlns:og" => "http://ogp.me/ns#", "xmlns:mixi" => "http://mixi-platform.com/ns#", "xmlns:fb" => "http://www.facebook.com/2008/fbml"}
+  %head
+    %title= @site ? @site.title + " 404 page was not found." : "404 page was not found."
+    %meta{"http-equiv" => "Content-Type", "content" => "text/html; charset=utf-8"}
+    = stylesheet_link_tag "/theme/wakate/tbs204/css/bootstrap.min.css", :media => "all"
+    = stylesheet_link_tag "/theme/wakate/global.css", :media => "all"
+  %body
+    #wrapper
+      #main
+        .navbar.navbar-fluid-top
+          = partial "navbar"
+        .row-fluid
+          .span8
+            #main-pane
+              %h3 404 page was not found.
+          .span4
+            #sub-pane
+              = partial 'sub-pane'
+        .row-fluid
+          #foot-pane
+            = partial "foot-pane"
+  = javascript_include_tag "/theme/wakate/tbs204/js/bootstrap.min.js"
+

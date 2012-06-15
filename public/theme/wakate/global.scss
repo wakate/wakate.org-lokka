@@ -1,0 +1,44 @@
+//
+
+.post-title {
+  font-size: 18px;
+  line-height: 24px;
+  border-bottom: solid 3px gray;
+}
+
+.post-body {
+  margin: 10px 0;
+}
+
+.post-foot {
+  text-align: right;
+}
+
+#main-pane {
+  margin-left: 10px;
+  .code {
+    margin: 10px 5px;
+  }
+}
+
+#sub-pane {
+  margin-right: 10px;
+  p {
+    margin: 10px 0;
+  }
+  ul {
+    margin: 10px;
+  }
+  li.entry {
+    margin-top: 5px;
+    list-style: none;
+    list-style-position: outside;
+  }
+}
+
+#foot-pane {
+  padding: 10px 0;
+  background: #eeeeee;
+  text-align: center;
+}
+

@@ -1,0 +1,16 @@
+.post
+  %h2.post-title
+    = link_to @entry.title, @entry.link 
+  .post-body
+    -# with whitespace preserved for code or pre.
+    = preserve do
+      = @entry.body
+  .post-foot
+    %div
+      %i.icon-time
+      = l(@entry.created_at, :format => :long)
+    - if logged_in?
+      %p
+        %i.icon-pencil
+        = link_to t('edit'), @entry.edit_link
+
